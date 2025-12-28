@@ -30,3 +30,46 @@
  * 5. check right user accessing his/her own data based on permission
  *
  */
+
+/**
+ *
+ * Generate secret .env (process.env.ACCESS_TOKEN_SECRET)
+ * ----------------In the terminal -----------
+ * 1. node
+ * 2. require('crypto').randomBytes(64)
+ * 3. require('crypto').randomBytes(64).toString('hex')
+ *
+ */
+
+/**
+ *
+ * ------------------------------------
+ *             JWT
+ * ------------------------------------
+ * 1. Install jsonwebtoken cookie-parser
+ * 2. set cookieParser as middleware
+ *
+ * 3.
+ * i. create a token
+ *
+ * jwt.sign(data, secret, {expiresIn: '5h'})
+ *
+ * set token to the cookie of res.cookie('token', token, {
+ * httpOnly: true,
+ * secure:L false
+ * }).send({})
+ *
+ * cors({
+ *  origin: [''],
+ *    credentials: true
+ * })
+ *
+ * client side: {
+ *  withCredentials: true
+ * }
+ *
+ * ii. send the token to the client side. make sure token is in the cookies (application)
+ *
+ * iii.
+ *
+ */
