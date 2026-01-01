@@ -111,7 +111,7 @@ async function run() {
       if (search) {
         query.location = { $regex: search, $options: "i" };
       }
-      console.log(query);
+      // console.log(query);
       const cursor = jobsCollection.find(query).sort(sortQuery);
       const result = await cursor.toArray();
       res.send(result);
